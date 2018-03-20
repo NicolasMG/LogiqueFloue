@@ -2,8 +2,7 @@
 
 using namespace core;
 template<typename T>
-class Not{
+class Not : public UnaryExpression {
 
 public:
-	virtual T evaluate(Expression o) const = 0;
 };

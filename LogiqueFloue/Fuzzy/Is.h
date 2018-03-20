@@ -2,8 +2,7 @@
 
 using namespace core;
 template<typename T>
-class Is{
+class Is : public UnaryExpression {
 
 public:
-	virtual T evaluate(Expression o) const = 0;
 };
