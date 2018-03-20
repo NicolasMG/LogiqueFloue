@@ -147,6 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Core\BinaryExpression.h" />
+    <ClInclude Include="Core\BinaryExpressionModel.h" />
+    <ClInclude Include="Core\Expression.h" />
+    <ClInclude Include="Core\UnaryExpression.h" />
+    <ClInclude Include="Core\UnaryExpressionModel.h" />
+    <ClInclude Include="Core\ValueModel.h" />
+    <ClInclude Include="Fuzzy\And.h" />
+    <ClInclude Include="Fuzzy\AndMin.h" />
+    <ClInclude Include="Fuzzy\AndMult.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
