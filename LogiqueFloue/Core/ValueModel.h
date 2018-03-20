@@ -4,9 +4,16 @@ namespace core
 	template<typename T>
 	class ValueModel : public Expression {
 	public:
-		T value;
+		
 
-		virtual T evaluate();
-		virtual void setValue(T v);
+		virtual T evaluate() {
+			if (value == null) return new nullValueException;
+			return T
+		}
+		virtual void setValue(T v) {
+			value = v;
+		}
+	private:
+		T value;
 	};
 }
