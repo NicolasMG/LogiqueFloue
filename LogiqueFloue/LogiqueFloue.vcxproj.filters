@@ -54,6 +54,51 @@
     <ClInclude Include="Fuzzy\AndMult.h">
       <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
     </ClInclude>
+    <ClInclude Include="Fuzzy\Or.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\OrMax.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\OrPlus.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\Then.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\ThenMin.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\ThenMult.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\Agg.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\AggMax.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\AggPlus.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\MamdaniDefuzz.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\CogDefuzz.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\Not.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\Is.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\NotMinus1.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\isTriangle.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
