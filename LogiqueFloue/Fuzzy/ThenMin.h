@@ -5,6 +5,7 @@ namespace fuzzy {
 	class ThenMin : public Then {
 
 	public:
+		ThenMin() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

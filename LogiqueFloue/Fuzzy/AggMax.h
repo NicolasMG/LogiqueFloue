@@ -8,7 +8,6 @@ namespace fuzzy {
 	public:
 		AggMax() {};
 
-
 		virtual T evaluate(Expression i, Expression r) const;
 
 	};

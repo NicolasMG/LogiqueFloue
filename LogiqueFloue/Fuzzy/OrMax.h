@@ -6,6 +6,7 @@ namespace fuzzy {
 	class OrMax : public Or {
 
 	public:
+		OrMax() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

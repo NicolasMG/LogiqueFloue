@@ -6,5 +6,7 @@ namespace fuzzy {
 	class Is : public UnaryExpression {
 
 	public:
+		Is() {};
+
 	};
 }

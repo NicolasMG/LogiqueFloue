@@ -5,6 +5,7 @@ namespace fuzzy {
 	class AndMult : public And {
 
 	public:
+		AndMult() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

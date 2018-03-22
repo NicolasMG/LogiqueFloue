@@ -5,6 +5,7 @@ namespace fuzzy {
 	class CogDefuzz : public MandaniDefuzz {
 
 	public:
+		CogDefuzz() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

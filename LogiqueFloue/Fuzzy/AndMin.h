@@ -6,6 +6,7 @@ namespace fuzzy {
 	class AndMin : public And {
 
 	public:
+		AndMIn() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

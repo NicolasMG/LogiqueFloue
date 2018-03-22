@@ -5,6 +5,7 @@ namespace fuzzy {
 	class OrPlus : public Or {
 
 	public:
+		OrPlus() {};
 		virtual T evaluate(Expression i, Expression r) const = 0;
 	};
 }

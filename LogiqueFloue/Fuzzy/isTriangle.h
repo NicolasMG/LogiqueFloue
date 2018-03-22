@@ -5,11 +5,10 @@ namespace fuzzy {
 	class isTriangle : public Is {
 
 	public:
-
+		isTriangle(T _min, T _mid, T max) { min = _min; mid = _mid; max = _max};
 		virtual T evaluate(Expression o) const = 0;
-		virtual min T;
-		virtual mid T;
-		virtual max T;
-
+		virtual T min;
+		virtual T mid;
+		virtual T max;
 	};
 }
