@@ -1,10 +1,12 @@
 #pragma once
 using namespace core;
-template<typename T>
+namespace fuzzy {
+	template<typename T>
 
 
-class And : public BinaryExpression {
+	class And : public BinaryExpression {
 
-public:
-	virtual T evaluate(Expression i, Expression r) const = 0;
-};
+	public:
+		virtual T evaluate(Expression i, Expression r) const = 0;
+	};
+}

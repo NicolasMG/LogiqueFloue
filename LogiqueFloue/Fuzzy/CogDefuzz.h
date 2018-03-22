@@ -1,9 +1,11 @@
 #pragma once
 
 using namespace core;
-template<typename T>
-class CogDefuzz : public MandaniDefuzz{
+namespace fuzzy {
+	template<typename T>
+	class CogDefuzz : public MandaniDefuzz {
 
-public:
-	virtual T evaluate(Expression i, Expression r) const = 0;
-};
+	public:
+		virtual T evaluate(Expression i, Expression r) const = 0;
+	};
+}
