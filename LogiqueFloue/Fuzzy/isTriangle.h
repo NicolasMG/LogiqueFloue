@@ -1,5 +1,5 @@
 #pragma once
-using namespace core;
+#include "is.h"
 namespace fuzzy {
 	template<typename T>
 	class isTriangle : public Is {

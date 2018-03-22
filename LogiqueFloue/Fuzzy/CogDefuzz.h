@@ -1,6 +1,5 @@
 #pragma once
-
-using namespace core;
+#include "MamdaniDefuzz.h"
 namespace fuzzy {
 	template<typename T>
 	class CogDefuzz : public MandaniDefuzz {

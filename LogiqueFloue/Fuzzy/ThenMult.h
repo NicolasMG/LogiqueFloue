@@ -1,6 +1,5 @@
 #pragma once
-
-using namespace core;
+#include "Then.h"
 namespace fuzzy {
 	template<typename T>
 	class ThenMult : public Then {

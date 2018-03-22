@@ -1,5 +1,5 @@
 #pragma once
-using namespace core;
+#include "Agg.h"
 namespace fuzzy {
 	template<typename T>
 

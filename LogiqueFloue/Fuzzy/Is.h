@@ -1,6 +1,6 @@
 #pragma once
 
-using namespace core;
+#include "../Core/UnaryExpression.h"
 namespace fuzzy {
 	template<typename T>
 	class Is : public UnaryExpression {

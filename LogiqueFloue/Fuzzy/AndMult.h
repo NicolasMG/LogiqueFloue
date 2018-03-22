@@ -1,6 +1,5 @@
 #pragma once
-
-using namespace core;
+#include "And.h"
 namespace fuzzy {
 	template<typename T>
 	class AndMult : public And {

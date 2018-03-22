@@ -1,5 +1,5 @@
 #pragma once
-using namespace core;
+#include "../Core/BinaryExpression.h"
 namespace fuzzy {
 	template<typename T>
 	class Agg : public BinaryExpression {

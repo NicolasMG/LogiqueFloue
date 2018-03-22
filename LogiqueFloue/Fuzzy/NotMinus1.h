@@ -1,5 +1,5 @@
 #pragma once
-using namespace core;
+#include "Not.h"
 namespace fuzzy {
 	template<typename T>
 	class NotMinus1 : public Not {

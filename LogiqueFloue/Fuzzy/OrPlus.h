@@ -1,6 +1,5 @@
 #pragma once
-
-using namespace core;
+#include "Or.h"
 namespace fuzzy {
 	template<typename T>
 	class OrPlus : public Or {
