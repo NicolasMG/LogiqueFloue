@@ -31,13 +31,13 @@ namespace core
 	};
 
 	template<typename T>
-	inline &Expression<T> const UnaryExpressionModel<T>::getOperand()
+	inline const Expression<T>*  UnaryExpressionModel<T>::getOperand()
 	{
 		return operand;
 	}
 
 	template<typename T>
-	inline &UnaryExpression<T> const UnaryExpressionModel<T>::getOperator()
+	inline  const UnaryExpression<T>* UnaryExpressionModel<T>::getOperator()
 	{
 		return _operator;
 	}
