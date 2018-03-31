@@ -1,16 +1,18 @@
 #pragma once
+
 #include "And.h"
+#include "../core/Expression.h"
 namespace fuzzy {
 	template<typename T>
-	class AndMult : public And {
+	class AndMult : public And<T> {
 
 	public:
-		AndMult() {};
-		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();
-			if (r == null) throw new NullExpressionException();
-			if (_operator == null) throw new NullOperatorException();
-
-		}
+		virtual ~AndMult() = default;
+		virtual T evaluate(core::Expression<T> *left, core::Expression<T> *right)const;
 	};
+
+	template<typename T>
+	T AndMult<T>::evaluate(core::Expression<T> *left, core::Expression<T> *right) const {
+		return left->evaluate() * right->evaluate();
+	}
 }

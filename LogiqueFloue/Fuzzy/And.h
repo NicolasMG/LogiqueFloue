@@ -1,12 +1,16 @@
 #pragma once
 #include "../Core/BinaryExpression.h"
+#include "../Core/Expression.h"
+
 namespace fuzzy {
 	template<typename T>
 
 
-	class And : public BinaryExpression {
+	class And : public BinaryExpression<T> {
 
 	public:
-		virtual T evaluate(Expression i, Expression r) const = 0;
+		virtual ~And() = default;
+
+		virtual T evaluate(Expression<T> *left, Expression<T> *right) const = 0;
 	};
 }
