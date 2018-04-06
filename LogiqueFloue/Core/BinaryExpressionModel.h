@@ -6,11 +6,17 @@ namespace core
 	public:
 
 		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();			if (r == null) throw new NullExpressionException();			if (_operator == null) throw new NullOperatorException();			return _operator.evaluate(l, r)
+			if (l == null) throw new NullExpressionException();
+			if (r == null) throw new NullExpressionException();
+			if (_operator == null) throw new NullOperatorException();
+
+			return _operator.evaluate(l, r)
+
 
 		}
 		virtual T evaluate() {
-			if (left == null) throw new NullExpressionException();			if (right == null) throw new NullExpressionException();
+			if (left == null) throw new NullExpressionException();
+			if (right == null) throw new NullExpressionException();
 			return evaluate(left, right)
 
 		}
@@ -27,7 +33,9 @@ namespace core
 	private:
 		BinaryExpressionModel<T> left;
 		BinaryExpressionModel<T> right;
-		BinaryExpression<T> _operator;
+		BinaryExpression<T> _operator;
+
+
 	};
 }
 
