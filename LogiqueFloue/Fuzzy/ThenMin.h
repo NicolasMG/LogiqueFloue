@@ -1,16 +1,27 @@
 #pragma once
-#include "Then.h"
+#include "../Core/Expression.h"
+#include "Or.h"
+
 namespace fuzzy {
 	template<typename T>
-	class ThenMin : public Then {
+	class ThenMin : public Or<T> {
 
 	public:
-		ThenMin() {};
-		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();
-			if (r == null) throw new NullExpressionException();
-			if (_operator == null) throw new NullOperatorException();
+		virtual ~ThenMin() = default;
+		virtual T evaluate(core::Expression<T> *left, core::Expression<T>*right) const;
 
-		}
+
 	};
+	template<typename T>
+	T ThenMin<T>::evaluate(core::Expression<T>*left, core::Expression<T>*right)const {
+		T leftEval, rightEval;
+		leftEval = left->evaluate();
+		rightEval = right->evaluate();
+		if (leftEval > rightEval) {
+			return rightEval;
+		}
+		else {
+			return leftEval;
+		}
+	}
 }

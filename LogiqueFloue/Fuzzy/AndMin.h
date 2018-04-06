@@ -7,7 +7,7 @@ namespace fuzzy {
 	class AndMin : public And<T> {
 
 	public:
-		Avirtual ~AndMin() = default;
+		virtual ~AndMin() = default;
 		virtual T evalutate(core::Expression<T> *left, core::Expression<T> *right) const;
 	};
 

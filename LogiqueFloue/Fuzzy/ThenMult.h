@@ -1,16 +1,20 @@
 #pragma once
+#include "../Core/Expression.h"
 #include "Then.h"
+
 namespace fuzzy {
 	template<typename T>
-	class ThenMult : public Then {
+	class ThenMult : public Then<T> {
 
 	public:
-		ThenMult() {};
-		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();
-			if (r == null) throw new NullExpressionException();
-			if (_operator == null) throw new NullOperatorException();
+		virtual ~ThenMult() = default;
+		virtual T evaluate(core::Expression<T> *left, core::Expression<T>*right) const;
 
-		}
+
 	};
+	template<typename T>
+	T ThenMult<T>::evaluate(core::Expression<T>*left, core::Expression<T>*right)const {
+
+		return left->evaluate() * right->evaluate();
+	}
 }

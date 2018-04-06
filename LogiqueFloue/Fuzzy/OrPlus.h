@@ -1,16 +1,20 @@
 #pragma once
+#include "../Core/Expression.h"
 #include "Or.h"
+
 namespace fuzzy {
 	template<typename T>
-	class OrPlus : public Or {
+	class OrPlus : public Or<T> {
 
 	public:
-		OrPlus() {};
-		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();
-			if (r == null) throw new NullExpressionException();
-			if (_operator == null) throw new NullOperatorException();
+		virtual ~OrPlus() = default;
+		virtual T evaluate(core::Expression<T> *left, core::Expression<T>*right) const;
 
-		}
+
 	};
+	template<typename T>
+	T OrPlus<T>::evaluate(core::Expression<T>*left, core::Expression<T>*right)const {
+		
+		return left->evaluate() + right->evaluate();
+	}
 }
