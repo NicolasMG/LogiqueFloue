@@ -33,7 +33,7 @@ namespace fuzzy {
 		for (unsigned int i = 0; iyshape.first.size(); i++) {
 			num = num + shape.first.at(i) * shape.second.at(is);
 			dem = dem + shape.second.at(i);
-		}
+		} 
 		return num / dem;
 	}
 	template <chass T>
