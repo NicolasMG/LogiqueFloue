@@ -24,7 +24,7 @@ namespace fuzzy {
 	}
 	template<class T>
 	T CogDefuzz<T>::evaluate(Expression<T>*left, Expression<T>* right) const {
-		return defuzz(buidShape(left, right));
+		return defuzz(buidShape(left, right)); 
 	}
 	template<class T>
 	T CogDefuzz<T>::defuzz(const typename Evaluator<T>::Shape &shape)const {
