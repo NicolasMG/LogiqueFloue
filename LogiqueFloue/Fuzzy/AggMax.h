@@ -4,7 +4,7 @@
 #include "../core/Expression.h"
 namespace fuzzy {
 	template<typename T>
-	class AggMax : public And<T> {
+	class AggMax : public Agg<T> {
 
 	public:
 		virtual ~AggMax() = default;
@@ -13,8 +13,8 @@ namespace fuzzy {
 
 	template<class T>
 	T AggMax<T>::evalutate(core::Expression<T> *left, core::Expression<T> *right) const {
-		leftEval = left->evaluate();
-		rightEval = right->evaluate();
+		T leftEval = left->evaluate();
+		T rightEval = right->evaluate();
 		return (leftEval < rightEval) ? rightEval : leftEval;
 	}
 }

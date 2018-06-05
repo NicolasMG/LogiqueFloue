@@ -4,26 +4,19 @@ namespace core
 	template<typename T>
 	class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 	public:
-		//BinaryExpressionModel(BinaryExpression<T> _operator, Expression<T> left, Expression<T> right);
 		virtual ~BinaryExpressionModel() = default;
+		BinaryExpressionModel(BinaryExpression<T> *_operator, Expression<T> *left, Expression<T> *right) :_operator(_operator), left(left), right(right) {};
 
 		virtual T evaluate(expression l, Expression r) {
-			if (l == null) throw new NullExpressionException();
-			if (r == null) throw new NullExpressionException();
-			if (_operator == null) throw new NullOperatorException();
-
+			if (l == null) throw new ExpressionException();
+			if (r == null) throw new ExpressionException();
+			if (_operator == null) throw new OperatorException();
 			return _operator.evaluate(l, r)
-
-
 		}
 
 		virtual T evaluate() {
-			if (left == null) throw new NullExpressionException();
-			if (right == null) throw new NullExpressionException();
 			return evaluate(left, right)
-
 		}
-
 
 		virtual &BinaryExpressionModel<T> const getLeft();
 		virtual &BinaryExpressionModel<T> const getRight();
@@ -38,13 +31,7 @@ namespace core
 		BinaryExpressionModel<T> right;
 		BinaryExpression<T> _operator;
 
-
 	};
-}
-
-template<typename T>
-inline core::BinaryExpressionModel<T>::BinaryExpressionModel(BinaryExpression<T> _operator, Expression<T> left, Expression<T> right)
-{
 }
 
 template<T>
@@ -54,29 +41,29 @@ template<T>
 
 template<T>
 &BinaryExpressionModel<T>::BinaryExpressionModel::getRight() {
-	return left;
+	return right;
 }
 
 template<typename T>
-inline &BinaryExpression const core::BinaryExpressionModel<T>::getOperator()
+&BinaryExpressionModel<T>::BinaryExpressionModel::getOperator()
 {
 	return _operator;
 }
 
 template<typename T>
-inline void core::BinaryExpressionModel<T>::setLeft(const BinaryExpressionModel<T> & _left)
+inline void core::BinaryExpressionModel<T>::setLeft(const BinaryExpressionModel<T> * _left)
 {
 	left = _left;
 }
 
 template<typename T>
-inline void core::BinaryExpressionModel<T>::setRight(const BinaryExpressionModel<T> & _right)
+inline void core::BinaryExpressionModel<T>::setRight(const BinaryExpressionModel<T> * _right)
 {
-	right = _right
+	right = _right;
 }
 
 template<typename T>
-inline void core::BinaryExpressionModel<T>::setOperator(const BinaryExpression<T> & ope)
+inline void core::BinaryExpressionModel<T>::setOperator(const BinaryExpression<T> * ope)
 {
 	_operator = ope;
 }

@@ -149,10 +149,20 @@
   <ItemGroup>
     <ClInclude Include="Core\BinaryExpression.h" />
     <ClInclude Include="Core\BinaryExpressionModel.h" />
+    <ClInclude Include="Core\BinaryShadowExpression.h" />
+    <ClInclude Include="Core\Evaluator.h" />
     <ClInclude Include="Core\Expression.h" />
+    <ClInclude Include="Core\ExpressionFactory.h" />
+    <ClInclude Include="Core\NaryExpression.h" />
+    <ClInclude Include="Core\NaryExpressionModel.h" />
+    <ClInclude Include="Core\NaryShadowExpression.h" />
     <ClInclude Include="Core\UnaryExpression.h" />
     <ClInclude Include="Core\UnaryExpressionModel.h" />
+    <ClInclude Include="Core\UnaryShadowExpression.h" />
     <ClInclude Include="Core\ValueModel.h" />
+    <ClInclude Include="Exceptions\EvaluationException.h" />
+    <ClInclude Include="Exceptions\OperandException.h" />
+    <ClInclude Include="Exceptions\OperatorException.h" />
     <ClInclude Include="Fuzzy\Agg.h" />
     <ClInclude Include="Fuzzy\AggMax.h" />
     <ClInclude Include="Fuzzy\AggPlus.h" />
@@ -160,6 +170,7 @@
     <ClInclude Include="Fuzzy\AndMin.h" />
     <ClInclude Include="Fuzzy\AndMult.h" />
     <ClInclude Include="Fuzzy\CogDefuzz.h" />
+    <ClInclude Include="Fuzzy\FuzzyFactory.h" />
     <ClInclude Include="Fuzzy\Is.h" />
     <ClInclude Include="Fuzzy\isTriangle.h" />
     <ClInclude Include="Fuzzy\MamdaniDefuzz.h" />
@@ -168,6 +179,9 @@
     <ClInclude Include="Fuzzy\Or.h" />
     <ClInclude Include="Fuzzy\OrMax.h" />
     <ClInclude Include="Fuzzy\OrPlus.h" />
+    <ClInclude Include="Fuzzy\SugenoConclusion.h" />
+    <ClInclude Include="Fuzzy\SugenoDefuzz.h" />
+    <ClInclude Include="Fuzzy\SugenoThen.h" />
     <ClInclude Include="Fuzzy\Then.h" />
     <ClInclude Include="Fuzzy\ThenMin.h" />
     <ClInclude Include="Fuzzy\ThenMult.h" />
@@ -176,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LogiqueFloue.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

@@ -4,7 +4,7 @@
 #include "../core/Expression.h"
 namespace fuzzy {
 	template<typename T>
-	class AggPlus : public And<T> {
+	class AggPlus : public Agg<T> {
 
 	public:
 		virtual ~AggPlus() = default;

@@ -19,6 +19,9 @@
     <Filter Include="Fichiers d%27en-tête\Fuzzy">
       <UniqueIdentifier>{0d4842ad-179e-4b77-ac83-ef71eac1ff29}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Exceptions">
+      <UniqueIdentifier>{a35b2c1c-9e22-45be-84e5-39dc25716eec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -66,9 +69,6 @@
     <ClInclude Include="Fuzzy\Then.h">
       <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
     </ClInclude>
-    <ClInclude Include="Fuzzy\ThenMin.h">
-      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
-    </ClInclude>
     <ClInclude Include="Fuzzy\ThenMult.h">
       <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
     </ClInclude>
@@ -99,6 +99,51 @@
     <ClInclude Include="Fuzzy\isTriangle.h">
       <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
     </ClInclude>
+    <ClInclude Include="Core\Evaluator.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\ExpressionFactory.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UnaryShadowExpression.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BinaryShadowExpression.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions\EvaluationException.h">
+      <Filter>Fichiers d%27en-tête\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions\OperandException.h">
+      <Filter>Fichiers d%27en-tête\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NaryExpression.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NaryExpressionModel.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\NaryShadowExpression.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions\OperatorException.h">
+      <Filter>Fichiers d%27en-tête\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\FuzzyFactory.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\SugenoConclusion.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\SugenoDefuzz.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\SugenoThen.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fuzzy\ThenMin.h">
+      <Filter>Fichiers d%27en-tête\Fuzzy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -106,6 +151,9 @@
     </ClCompile>
     <ClCompile Include="LogiqueFloue.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

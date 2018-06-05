@@ -5,13 +5,9 @@
 
 namespace fuzzy {
 	template<typename T>
-
-
 	class Or : public BinaryExpression<T> {
-
 	public:
 		virtual ~Or() = default;
-
 		virtual T evaluate(Expression<T> *left, Expression<T> *right) const = 0;
 	};
 }

@@ -2,7 +2,7 @@
 
 #include "../Core/BinaryExpression.h"
 #include "../Core/Expression.h"
-//rajouter include Evaluator
+#include "../Core/Evaluator.h"
 
 namespace fuzzy {
 	template<typename T>

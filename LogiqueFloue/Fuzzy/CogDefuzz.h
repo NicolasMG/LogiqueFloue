@@ -38,6 +38,6 @@ namespace fuzzy {
 	}
 	template <class T>
 	typename Evaluator<T>::Shape CogDefuzz<T>::buidShape(Expression<T>*in, Expression<T>*out)const {
-		return Evaluator<T>::buildShape(min, max, step, (ValueModel<T>)*in, (ValueModel<T>*)out);//retirer 2eme ValueModel<T>
+		return Evaluator<T>::buildShape(min, max, step, (ValueModel<T>*)in, out);
 	}
 }
