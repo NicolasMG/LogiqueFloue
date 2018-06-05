@@ -8,7 +8,7 @@ namespace fuzzy {
 
 	public:
 		virtual ~Is()= default;
-		virtual T evaluate(Expression<T> *expression) const;
+		virtual T evaluate(Expression<T> *expression) const = 0;
 
 	};
 }

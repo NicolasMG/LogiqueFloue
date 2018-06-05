@@ -4,6 +4,7 @@ namespace core
 	template<typename T>
 	class UnaryExpressionModel : public UnaryExpression, public Expression {
 	public:
+		virtual UnaryExpressionModel() = default;
 		virtual T evaluate(Expression o) {
 			
 			if (_operator == null) throw new NullOperatorException();

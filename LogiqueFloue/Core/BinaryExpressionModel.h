@@ -2,8 +2,10 @@
 namespace core
 {
 	template<typename T>
-	class BinaryExpressionModel : public BinaryExpression, public Expression {
+	class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 	public:
+		//BinaryExpressionModel(BinaryExpression<T> _operator, Expression<T> left, Expression<T> right);
+		virtual ~BinaryExpressionModel() = default;
 
 		virtual T evaluate(expression l, Expression r) {
 			if (l == null) throw new NullExpressionException();
@@ -14,6 +16,7 @@ namespace core
 
 
 		}
+
 		virtual T evaluate() {
 			if (left == null) throw new NullExpressionException();
 			if (right == null) throw new NullExpressionException();
@@ -39,14 +42,21 @@ namespace core
 	};
 }
 
+template<typename T>
+inline core::BinaryExpressionModel<T>::BinaryExpressionModel(BinaryExpression<T> _operator, Expression<T> left, Expression<T> right)
+{
+}
+
 template<T>
-&BinaryExpressionModel<T> BinaryExpressionModel::getLeft() {
+&BinaryExpressionModel<T>::BinaryExpressionModel::getLeft() {
 	return left;
 }
+
 template<T>
-&BinaryExpressionModel<T> BinaryExpressionModel::getRight() {
+&BinaryExpressionModel<T>::BinaryExpressionModel::getRight() {
 	return left;
 }
+
 template<typename T>
 inline &BinaryExpression const core::BinaryExpressionModel<T>::getOperator()
 {

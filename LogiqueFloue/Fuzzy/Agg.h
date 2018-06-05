@@ -12,5 +12,6 @@ namespace fuzzy {
 		virtual ~Agg() = default;
 
 		virtual T evaluate(Expression<T> *left, Expression<T> *right) const = 0;
+
 	};
 }
