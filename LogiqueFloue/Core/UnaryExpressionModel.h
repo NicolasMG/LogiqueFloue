@@ -1,11 +1,17 @@
 #pragma once
+
+#include <iostream>
+#include "Expression.h"
+#include "UnaryExpression.h"
+
 namespace core
 {
 	template<typename T>
 	class UnaryExpressionModel : public UnaryExpression<T>, public Expression<T> {
 	public:
 		virtual ~UnaryExpressionModel() = default;
-		virtual UnaryExpressionModel() = default;
+		virtual UnaryExpressionModel()=default;
+		virtual UnaryExpressionModel(Expression<T> *operand, UnaryExpression<T> *_operator):operand(operand),_operator(_operator){};
 		virtual T evaluate(Expression o) {
 			if (_operator == null) throw new NullOperatorException();
 			return _operator.evaluate(o);

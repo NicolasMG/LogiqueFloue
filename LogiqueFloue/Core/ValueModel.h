@@ -1,20 +1,37 @@
 #pragma once
-namespace core
-{
-	template<typename T>
+#include "Expression.h"
+namespace core {
+
+	template <typename T>
 	class ValueModel : public Expression<T> {
 	public:
 		virtual ~ValueModel() = default;
-		ValueModel(T value) :value(value) {}
-		virtual T evaluate() {
-			if (value == null) return new nullValueException;
-			return T;
-		}
-		virtual void setValue(T *v) {
-			value = *v;
-		}
-		//virtual T getValue() const;
+		ValueModel(T value);
+
+		virtual T evaluate() const;
+		virtual void setValue(T *v);
+		virtual T getValue() const;
+
 	private:
 		T value;
 	};
+
+	template <typename T>
+	ValueModel<T>::ValueModel(T value) : value(value) {}
+
+	template <typename T>
+	T ValueModel<T>::evaluate() const {
+		return value;
+	}
+
+	template <typename T>
+	void ValueModel<T>::setValue(T *v) {
+		value = *v;
+	}
+
+	template <typename T>
+	T ValueModel<T>::getValue() const {
+		return value;
+	}
+
 }

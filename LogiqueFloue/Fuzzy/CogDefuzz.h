@@ -8,7 +8,7 @@ namespace fuzzy {
 
 	public:
 		CogDefuzz(T min, T max, T step);
-		T evaulate(Expression<T>* left, Expression<T>*right)const;
+		T evaluate(Expression<T>* left, Expression<T>*right)const;
 		virtual ~CogDefuzz() = default;
 		T defuzz(const typename Evaluator<T>::Shape &shape)const;
 		typename Evaluator<T>::Shape buildShape(Expression<T>*in, Expression<T> *out) const;
@@ -37,7 +37,7 @@ namespace fuzzy {
 		return num / dem;
 	}
 	template <class T>
-	typename Evaluator<T>::Shape CogDefuzz<T>::buidShape(Expression<T>*in, Expression<T>*out)const {
+	typename Evaluator<T>::Shape CogDefuzz<T>::buildShape(Expression<T>*in, Expression<T>*out)const {
 		return Evaluator<T>::buildShape(min, max, step, (ValueModel<T>*)in, out);
 	}
 }

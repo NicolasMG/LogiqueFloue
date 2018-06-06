@@ -1,9 +1,12 @@
 #pragma once
 
 #include <set>
+#include <vector>
 #include "BinaryExpression.h"
 #include "BinaryExpressionModel.h"
 #include "Expression.h"
+#include "NaryExpression.h"
+#include "NaryExpressionModel.h"
 #include "UnaryExpression.h"
 #include "UnaryExpressionModel.h"
 #include "ValueModel.h"

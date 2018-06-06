@@ -8,11 +8,11 @@ namespace fuzzy {
 
 	public:
 		virtual ~AggMax() = default;
-		virtual T evalutate(core::Expression<T> *left, core::Expression<T> *right) const;
+		virtual T evaluate(Expression<T> *left, Expression<T> *right) const;
 	};
 
 	template<class T>
-	T AggMax<T>::evalutate(core::Expression<T> *left, core::Expression<T> *right) const {
+	T AggMax<T>::evaluate(Expression<T> *left, Expression<T> *right) const {
 		T leftEval = left->evaluate();
 		T rightEval = right->evaluate();
 		return (leftEval < rightEval) ? rightEval : leftEval;

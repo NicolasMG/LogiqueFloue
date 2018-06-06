@@ -11,6 +11,6 @@ namespace fuzzy {
 	};
 	template<typename T>
 	T NotMinus1<T>::evaluate(core::Expression<T> * expression) const {
-		return 1 - expression->evalaute();
+		return 1 - expression->evaluate();
 	}
 }

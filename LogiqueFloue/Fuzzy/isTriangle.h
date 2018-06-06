@@ -2,13 +2,14 @@
 
 #include "Is.h"
 #include "../Core/Expression.h"
+#include "../Exceptions/OperandException.h"
 
 namespace fuzzy {
 	template<typename T>
-	class isTriangle : public Is<T> {
+	class IsTriangle : public Is<T> {
 
 	public:
-		isTriangle(T min, T mid, T max) : min(min), mid(mid), max(max) {
+		IsTriangle(T min, T mid, T max) : min(min), mid(mid), max(max) {
 		};
 		virtual ~IsTriangle() = default;
 		virtual T evaluate(core::Expression<T> *expression) const {

@@ -19,6 +19,7 @@ namespace fuzzy {
 			else {
 				return leftEval;
 			}
-		}
+		};
 	};
+
 }

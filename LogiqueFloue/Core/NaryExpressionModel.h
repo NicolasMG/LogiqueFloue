@@ -1,7 +1,6 @@
 #pragma once
 
 #include <vector>
-
 #include "../Exceptions/OperandException.h"
 #include "../Exceptions/OperatorException.h"
 #include "Expression.h"
@@ -12,7 +11,7 @@ template <typename T>
 class NaryExpressionModel : public NaryExpression<T> {
 public:
 	NaryExpressionModel(NaryExpression<T> *ope, std::vector<Expression<T>*> * operands) :ope(ope), operands(operands) {};
-	virtual ÑaryExpressionModel() = default;
+	virtual ~NaryExpressionModel() = default;
 	virtual T evaluate() const {
 		if (operand->empty()) {
 			throw exceptions:OperandException("Operands is empty");
